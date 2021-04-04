@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,33 +9,77 @@
     tools:context=".MainActivity">
 
     <View
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_laver_gradient" />
+        android:id="@+id/view"
+        android:layout_width="411dp"
+        android:layout_height="733dp"
+        android:background="@drawable/bg_laver_gradient"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-1dp" />
 
     <TextView
         android:id="@+id/titleTXT"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="339dp"
+        android:layout_height="125dp"
+        android:gravity="center"
         android:text="IMC"
-        android:textColor="@color/white"
-        android:textSize="18sp"
         android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="100dp"
         android:textStyle="bold"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.334" />
 
     <EditText
         android:id="@+id/pesoEDT"
-         />
+        android:layout_width="211dp"
+        android:layout_height="57dp"
+        android:background="@drawable/bg_buttons"
+        android:gravity="center"
+        android:text="Peso (Ex: 80.0)"
+        android:textColor="@color/gray"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.574" />
 
     <EditText
         android:id="@+id/alturaEDT"
-         />
+        android:layout_width="211dp"
+        android:layout_height="57dp"
+        android:background="@drawable/bg_buttons"
+        android:gravity="center"
+        android:text="Altura (Ex: 1.75)"
+        android:textColor="@color/gray"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintVertical_bias="0.698" />
 
     <Button
         android:id="@+id/calcularBTN"
-         />
+        android:layout_width="154dp"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_button_calcular"
+        android:gravity="center"
+        android:text="Calcular"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alturaEDT"
+        app:layout_constraintVertical_bias="0.401" />
 
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
